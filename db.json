@@ -1,0 +1,123 @@
+{
+  "data": [
+    {
+      "name": "Jack Grilish",
+      "id": 1,
+      "messages": [
+        {
+          "message": "Hi",
+          "isMy": false
+        },
+        {
+          "message": "Wanna do leg day?",
+          "isMy": false
+        }
+      ],
+      "image": "https://cdn.vox-cdn.com/thumbor/ocipv9cIDdXEdl4DyRM43hQRIKo=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22781257/1333254883.jpg"
+    },
+    {
+      "name": "Eden Hazard",
+      "id": 2,
+      "messages": [
+        {
+          "message": "Hello! How are you?",
+          "isMy": false
+        },
+        {
+          "message": "Wanna go to McDonald's?",
+          "isMy": false
+        }
+      ],
+      "image": "https://cdn.vox-cdn.com/thumbor/jKsxCjTYv0bqMKhukTiQg5NN9v0=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22965638/1349663003.jpg"
+    },
+    {
+      "name": "Gabriel Jesus",
+      "id": 3,
+      "messages": [
+        {
+          "message": "How are you my brother?",
+          "isMy": false
+        },
+        {
+          "message": "Are you going to play football with the boys today?",
+          "isMy": false
+        }
+      ],
+      "image": "https://i2-prod.football.london/incoming/article26646672.ece/ALTERNATES/s1200c/1_GettyImages-1250345889-1.jpg"
+    },
+    {
+      "name": "James Rodriguez",
+      "id": 4,
+      "messages": [
+        {
+          "message": "Hey?",
+          "isMy": false
+        },
+        {
+          "message": "Today at 19:00 we have a match. Are you coming?",
+          "isMy": false
+        }
+      ],
+      "image": "https://cdn.vox-cdn.com/thumbor/n2yOddukVL1mz3weRSAI0m0VLJo=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/11730801/996424514.jpg.jpg"
+    },
+    {
+      "name": "Lionel Messi",
+      "id": 5,
+      "messages": [
+        {
+          "message": "Are you going to a barbecue with the boys tonight at 6pm?",
+          "isMy": false
+        }
+      ],
+      "image": "https://www.planetsport.com/image-library/square/1200/a/argentinas-lionel-messi-poses-with-the-fifa-world-cup-trophy.jpg"
+    },
+    {
+      "name": "Cristiano Ronaldo",
+      "id": 6,
+      "messages": [
+        {
+          "message": "Today we have leg training. Shall we do biceps?",
+          "isMy": false
+        }
+      ],
+      "image": "https://www.planetsport.com/image-library/square/1200/c/cristiano-ronaldo-portugal-5-june-2022.jpg"
+    },
+    {
+      "name": "Erling Haaland",
+      "id": 7,
+      "messages": [
+        {
+          "message": "You will see how in the match with Real Madrid I will score 3 goals easily)",
+          "isMy": false
+        }
+      ],
+      "image": "https://www.mancity.com/meta/media/233jlh2j/microsoftteams-image-127.png"
+    },
+    {
+      "name": "Thomas Muller",
+      "id": 8,
+      "messages": [
+        {
+          "message": "Bro",
+          "isMy": false
+        },
+        {
+          "message": "Were we playing Fifa tonight?",
+          "isMy": false
+        }
+      ],
+      "image": "https://imgresizer.eurosport.com/unsafe/1200x1200/smart/filters:format(jpeg)/origin-imgresizer.eurosport.com/2015/09/16/1691651-35831500-2560-1440.jpg"
+    },
+    {
+      "name": "Kylian Mbappe",
+      "id": 9,
+      "messages": [
+        {
+          "message": "Can you help me with something today?",
+          "isMy": false
+        }
+      ],
+      "image": "https://imageio.forbes.com/specials-images/imageserve/626c7cf3616c1112ae834a2b/0x0.jpg?format=jpg&crop=1603,1603,x1533,y577,safe&height=416&width=416&fit=bounds"
+    }
+  ]
+}

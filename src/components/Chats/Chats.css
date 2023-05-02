@@ -1,0 +1,83 @@
+.chats {
+    height: 70vh;
+    width: 100%;
+    box-shadow: 0px 8px 10px rgba(0,0,0,0.20);
+    overflow: hidden;
+    /*background-color: #87a3ec;*/
+    display: inline-block;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.chats .discussion {
+    width: 100%;
+    height: 90px;
+    background-color: #FAFAFA;
+    border-bottom: solid 1px #E0E0E0;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.online {
+    position: relative;
+    top: 30px;
+    left: 35px;
+    width: 13px;
+    height: 13px;
+    background-color: #8BC34A;
+    border-radius: 13px;
+    border: 3px solid #FAFAFA;
+}
+
+.desc-contact {
+    height: 43px;
+    width:75%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chats .message-active {
+    /*width: 98.5%;*/
+    height: 90px;
+    background-color: #d9d6d6;
+    border-bottom: solid 1px #E0E0E0;
+}
+
+.chats .discussion .photo {
+    margin-left:20px;
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: #E6E7ED;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.chats .chat_title {
+    height: 50px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    margin: 0;
+    background-color: #87a3ec;
+}
+
+.chats .discussion .name {
+    margin: 0 0 0 20px;
+    font-family:'Montserrat', sans-serif;
+    font-size: 11pt;
+    color:#515151;
+}
+
+.chats .discussion .message {
+    margin-left: 20px;
+    font-family:'Montserrat', sans-serif;
+    font-size: 9pt;
+    color:#515151;
+}
