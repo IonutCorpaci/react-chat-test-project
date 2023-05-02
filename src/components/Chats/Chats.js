@@ -12,40 +12,12 @@ const Chats = (props) => {
 
     useEffect(() => {
         getAllUsers()
-            .then(onChatsLoaded)
+            .then(onChatsLoaded);
     }, [])
 
-    const newUser = {
-        name: "Man Grilish",
-        messages: [
-            {
-                message: "Hi Johny",
-                isMy: false
-            },
-            {
-                message: "No Wanna do leg day?",
-                isMy: false
-            }
-        ],
-        image: "https://cdn.vox-cdn.com/thumbor/ocipv9cIDdXEdl4DyRM43hQRIKo=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22781257/1333254883.jpg"
-
-    }
-
-    // useEffect(() => {
-    //     fetch('http://localhost:3000/data', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(newUser),
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => console.log(data))
-    // }, [])
-
     const onChatsLoaded = (chatList) => {
-        setChat(chatList)
-    }
+        setChat(chatList);
+    };
 
     const chatsRef = useRef([]);
 
@@ -53,12 +25,12 @@ const Chats = (props) => {
         chatsRef.current.forEach(item => item.classList.remove('message-active'));
         chatsRef.current[id].classList.add('message-active');
         chatsRef.current[id].focus();
-    }
+    };
 
 
     function renderItems(arr) {
         const items = arr.map((item, i) => {
-            const messageArr = item.messages[item.messages.length - 1].message
+            const messageArr = item.messages[item.messages.length - 1].message;
             return (
                 <div
                     className="discussion d-flex align-items-center"
@@ -66,7 +38,7 @@ const Chats = (props) => {
                     key={item.id}
                     onClick={() => {
                         props.onUserSelected(item.id);
-                        focusOnChat(i)
+                        focusOnChat(i);
                     }}
                 >
                     <img src={item.image} alt="userLogo" className="photo"/>

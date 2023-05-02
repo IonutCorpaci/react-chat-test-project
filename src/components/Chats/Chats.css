@@ -2,8 +2,6 @@
     height: 70vh;
     width: 100%;
     box-shadow: 0px 8px 10px rgba(0,0,0,0.20);
-    overflow: hidden;
-    /*background-color: #87a3ec;*/
     display: inline-block;
     overflow: auto;
     border-radius: 10px;
@@ -50,12 +48,8 @@
     display: block;
     width: 45px;
     height: 45px;
-    background: #E6E7ED;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .chats .chat_title {

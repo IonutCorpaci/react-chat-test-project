@@ -12,7 +12,7 @@ const Messages = (props) => {
     const {getUser, error, loading} = ChatService();
 
     useEffect(() => {
-        updateChat()
+        updateChat();
     }, [props.userId])
 
     const updateChat = () => {
@@ -23,26 +23,26 @@ const Messages = (props) => {
         }
 
         getUser(userId)
-            .then(onUserLoaded)
-    }
+            .then(onUserLoaded);
+    };
 
     const onUserLoaded = (user) => {
-        setUser(user)
-    }
+        setUser(user);
+    };
 
     const addSms = (messageText) => {
+
         const newMessage = {
             message: messageText,
             isMy: true
-        }
+        };
 
-        user.messages.push(newMessage)
-    }
+        user.messages.push(newMessage);
+    };
 
-    const content = user ? <View user={user} addSms={addSms}/> : <h2 style={{textAlign: 'center', paddingTop: '50%'}}>Select a chat</h2>
+    const content = user ? <View user={user} addSms={addSms}/> : <h2 style={{textAlign: 'center', paddingTop: '50%'}}>Select a chat</h2>;
     const errorMessage = error ? <ErrorMessage/> : null;
     const spinner = loading ? <Spinner/> : null;
-
 
     return (
         <Container className="messagesFirst" style={{height: '100%'}}>
@@ -54,8 +54,8 @@ const Messages = (props) => {
 }
 
 const View = (props) => {
-    const [sms, setSms] = useState('')
-    const [isBtnDisabled, setBtnActive] = useState(true)
+    const [sms, setSms] = useState('');
+    const [isBtnDisabled, setBtnActive] = useState(true);
     const {user, addSms} = props;
     const {name, image, messages} = user;
 
@@ -80,30 +80,30 @@ const View = (props) => {
                 {showMessages}
             </Col>
         )
-    }
+    };
 
     const onSmsChange = (e) => {
-        setSms(e.target.value)
-    }
+        setSms(e.target.value);
+    };
 
     const onSubmitSms = () => {
         if (sms === '') return;
         addSms(sms);
         setSms('');
-    }
+    };
 
     const onEnterClick = (e) => {
         if (e.key === 'Enter') {
             onSubmitSms();
             e.preventDefault();
         }
-    }
+    };
 
     useEffect(() => {
         if (sms.length > 0) {
-            setBtnActive(false)
+            setBtnActive(false);
         } else {
-            setBtnActive(true)
+            setBtnActive(true);
         }
     }, [sms]);
 

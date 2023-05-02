@@ -5,11 +5,11 @@ import Messages from "../Messages/Messages";
 import {Col, Container, Row} from "react-bootstrap";
 
 function App() {
-  const [userSelected, setUserSelected] = useState(null)
+  const [userSelected, setUserSelected] = useState(null);
 
   const onUserSelected = (id) => {
     setUserSelected(id);
-  }
+  };
 
 
   return (
