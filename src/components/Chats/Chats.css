@@ -1,7 +1,7 @@
 .chats {
     height: 70vh;
     width: 100%;
-    box-shadow: 0px 8px 10px rgba(0,0,0,0.20);
+    box-shadow: 0 8px 10px rgba(0,0,0,0.20);
     display: inline-block;
     overflow: auto;
     border-radius: 10px;
@@ -17,17 +17,6 @@
     cursor: pointer;
 }
 
-.online {
-    position: relative;
-    top: 30px;
-    left: 35px;
-    width: 13px;
-    height: 13px;
-    background-color: #8BC34A;
-    border-radius: 13px;
-    border: 3px solid #FAFAFA;
-}
-
 .desc-contact {
     height: 43px;
     width:75%;
@@ -37,7 +26,6 @@
 }
 
 .chats .message-active {
-    /*width: 98.5%;*/
     height: 90px;
     background-color: #d9d6d6;
     border-bottom: solid 1px #E0E0E0;

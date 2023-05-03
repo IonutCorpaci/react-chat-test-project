@@ -11,7 +11,7 @@ First is:
 
 Then:
 
-### `json-server -watch db.json`
+### `json-server -w db.json`
 
 And now you cand start project with command:
 

@@ -40,7 +40,7 @@ const Messages = (props) => {
         user.messages.push(newMessage);
     };
 
-    const content = user ? <View user={user} addSms={addSms}/> : <h2 style={{textAlign: 'center', paddingTop: '50%'}}>Select a chat</h2>;
+    const content = user ? <View user={user} addSms={addSms}/> : <h2 style={{textAlign: 'center', paddingTop: '40%'}}>Select a chat</h2>;
     const errorMessage = error ? <ErrorMessage/> : null;
     const spinner = loading ? <Spinner/> : null;
 

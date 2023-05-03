@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from "react";
 import Chats from "../Chats/Chats";
 import Messages from "../Messages/Messages";
+import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import {Col, Container, Row} from "react-bootstrap";
 
 function App() {
@@ -17,10 +18,14 @@ function App() {
       <Container fluid style={{height: "70vh"}}>
         <Row>
           <Col xs={4} style={{paddingLeft: '0px', paddingRight: '0px', height: "70vh"}}>
-            <Chats onUserSelected={onUserSelected}/>
+            <ErrorBoundary>
+              <Chats onUserSelected={onUserSelected}/>
+            </ErrorBoundary>
           </Col>
           <Col xs={8} style={{paddingLeft: '0px', paddingRight: '0px', height: "70vh"}}>
-            <Messages userId={userSelected}/>
+            <ErrorBoundary>
+              <Messages userId={userSelected}/>
+            </ErrorBoundary>
           </Col>
         </Row>
       </Container>
