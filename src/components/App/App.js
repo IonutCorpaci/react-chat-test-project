@@ -8,18 +8,13 @@ import {Col, Container, Row} from "react-bootstrap";
 function App() {
   const [userSelected, setUserSelected] = useState(null);
 
-  const onUserSelected = (id) => {
-    setUserSelected(id);
-  };
-
-
   return (
     <div className="App">
       <Container fluid style={{height: "70vh"}}>
         <Row>
           <Col xs={4} style={{paddingLeft: '0px', paddingRight: '0px', height: "70vh"}}>
             <ErrorBoundary>
-              <Chats onUserSelected={onUserSelected}/>
+              <Chats onUserSelected={(id) => setUserSelected(id)}/>
             </ErrorBoundary>
           </Col>
           <Col xs={8} style={{paddingLeft: '0px', paddingRight: '0px', height: "70vh"}}>

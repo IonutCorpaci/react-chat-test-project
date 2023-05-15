@@ -23,11 +23,7 @@ const Messages = (props) => {
         }
 
         getUser(userId)
-            .then(onUserLoaded);
-    };
-
-    const onUserLoaded = (user) => {
-        setUser(user);
+            .then(user => setUser(user));
     };
 
     const addSms = (messageText) => {
@@ -40,15 +36,15 @@ const Messages = (props) => {
         user.messages.push(newMessage);
     };
 
-    const content = user ? <View user={user} addSms={addSms}/> : <h2 style={{textAlign: 'center', paddingTop: '40%'}}>Select a chat</h2>;
-    const errorMessage = error ? <ErrorMessage/> : null;
-    const spinner = loading ? <Spinner/> : null;
+    const content = user ? <View user={user} addSms={addSms}/> : <h2 className="selectChat">Select a chat</h2>;
+    const errorMessage = error && <ErrorMessage/>;
+    const spinner = loading && <Spinner/>;
 
     return (
         <Container className="messagesFirst" style={{height: '100%'}}>
             {errorMessage}
             {spinner}
-            {!errorMessage && !spinner ? content : null}
+            {!errorMessage && !spinner && content}
         </Container>
     )
 }
@@ -65,11 +61,10 @@ const View = (props) => {
                 <div
                     className={ i === 0 ? 'message' : 'message text-only'}
                     key={i}
-                    style={{color: 'black'}}
                 >
                     <div className={item.isMy === false ? 'resp' : 'response'}>
                         {i === 0 ? <img src={image} className="photo" alt="user"/> : null}
-                        <p className="text" style={{whiteSpace: 'pre-wrap', wordWrap: "break-word"}}>{item.message}</p>
+                        <p className="text">{item.message}</p>
                     </div>
                 </div>
             )
@@ -80,10 +75,6 @@ const View = (props) => {
                 {showMessages}
             </Col>
         )
-    };
-
-    const onSmsChange = (e) => {
-        setSms(e.target.value);
     };
 
     const onSubmitSms = () => {
@@ -112,13 +103,7 @@ const View = (props) => {
     return (
         <Row className="chat flex-column" style={{height: '100%'}}>
             <Col xs={2} className="header-chat">
-                <img src={image} style={{
-                    marginLeft: '20px',
-                    display: 'block',
-                    width: '45px',
-                    height: '45px',
-                    borderRadius: '50px'
-                }} alt="USER"/>
+                <img src={image} className="user-image" alt="USER"/>
                 <p className="name">{name}</p>
             </Col>
             {msg}
@@ -128,11 +113,11 @@ const View = (props) => {
                     className="write-message"
                     placeholder="Type your message here"
                     value={sms}
-                    onChange={onSmsChange}
+                    onChange={(e) => setSms(e.target.value)}
                     onKeyDown={onEnterClick}
                 >
                 </textarea>
-                <button disabled={isBtnDisabled} onClick={onSubmitSms} style={{backgroundColor: '#fff', border: 'none'}}>
+                <button disabled={isBtnDisabled} onClick={onSubmitSms} className="sendMessageButton">
                     Send
                 </button>
             </Col>

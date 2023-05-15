@@ -24,6 +24,7 @@
     display:flex;
     align-items: center;
     margin-bottom: 8px;
+    color: black
 }
 
 .chat .messages-chat {
@@ -58,6 +59,8 @@
 
 .response .text {
     background-color: #e3effd !important;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .footer-chat {
@@ -98,6 +101,19 @@
     right: 40px;
 }
 
+.sendMessageButton {
+    background-color: #fff;
+    border: none;
+}
+
+.user-image {
+    margin-left: 20px;
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+}
+
 .write-message {
     border:none !important;
     width: 100%;
@@ -106,7 +122,10 @@
     padding: 10px;
     outline: none;
     resize: none;
-
+}
+.selectChat {
+    text-align: center;
+    padding-top: 40%;
 }
 
 .footer-chat *::-webkit-input-placeholder {
