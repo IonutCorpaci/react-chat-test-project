@@ -9,16 +9,10 @@ const ChatService = () => {
         return res;
     }
 
-    const getUser = async (id) => {
-        const res = await request('http://localhost:3000/data');
-        return res.find(user => user.id === id);
-    }
-
     return {
         loading,
         error,
-        getAllUsers,
-        getUser
+        getAllUsers
     }
 }
 

@@ -1,7 +1,6 @@
 import './Messages.css';
 import {useEffect, useState} from "react";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
-import Spinner from "../Spinner/Spinner";
 import ChatService from "../../services/ChatService";
 import {Col, Container, Row} from "react-bootstrap";
 
@@ -9,7 +8,7 @@ import {Col, Container, Row} from "react-bootstrap";
 const Messages = (props) => {
     const [user, setUser] = useState(null);
 
-    const {getUser, error, loading} = ChatService();
+    const {error} = ChatService();
 
     useEffect(() => {
         updateChat();
@@ -22,9 +21,9 @@ const Messages = (props) => {
             return;
         }
 
-        getUser(userId)
-            .then(user => setUser(user));
+        setUser(() => props.getUserById(userId))
     };
+
 
     const addSms = (messageText) => {
 
@@ -38,13 +37,13 @@ const Messages = (props) => {
 
     const content = user ? <View user={user} addSms={addSms}/> : <h2 className="selectChat">Select a chat</h2>;
     const errorMessage = error && <ErrorMessage/>;
-    const spinner = loading && <Spinner/>;
+    // const spinner = loading && <Spinner/>;
 
     return (
         <Container className="messagesFirst" style={{height: '100%'}}>
             {errorMessage}
-            {spinner}
-            {!errorMessage && !spinner && content}
+            {/*{spinner}*/}
+            {!errorMessage && content}
         </Container>
     )
 }

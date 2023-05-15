@@ -12,12 +12,11 @@ const Chats = (props) => {
 
     useEffect(() => {
         getAllUsers()
-            .then(onChatsLoaded);
+            .then(chatList => {
+                setChat(chatList)
+                props.getDataFromChild(chatList);
+            });
     }, [])
-
-    const onChatsLoaded = (chatList) => {
-        setChat(chatList);
-    };
 
     const chatsRef = useRef([]);
 
@@ -26,7 +25,6 @@ const Chats = (props) => {
         chatsRef.current[id].classList.add('message-active');
         chatsRef.current[id].focus();
     };
-
 
     function renderItems(arr) {
         const items = arr.map((item, i) => {

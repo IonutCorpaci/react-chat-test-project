@@ -7,6 +7,11 @@ import {Col, Container, Row} from "react-bootstrap";
 
 function App() {
   const [userSelected, setUserSelected] = useState(null);
+  const [data, setData] = useState(null);
+
+  const getUserById = (id) => {
+    return data.find(user => user.id === id);
+  }
 
   return (
     <div className="App">
@@ -14,12 +19,12 @@ function App() {
         <Row>
           <Col xs={4} style={{paddingLeft: '0px', paddingRight: '0px', height: "70vh"}}>
             <ErrorBoundary>
-              <Chats onUserSelected={(id) => setUserSelected(id)}/>
+              <Chats onUserSelected={(id) => setUserSelected(id)} getDataFromChild={(data) => setData(data)}/>
             </ErrorBoundary>
           </Col>
           <Col xs={8} style={{paddingLeft: '0px', paddingRight: '0px', height: "70vh"}}>
             <ErrorBoundary>
-              <Messages userId={userSelected}/>
+              <Messages userId={userSelected} getUserById={getUserById}/>
             </ErrorBoundary>
           </Col>
         </Row>
